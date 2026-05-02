@@ -34,12 +34,12 @@ if (moreBtn2) {
     e.preventDefault();
     sidebar2.classList.toggle("visible");
   });
+}
 if (contact){
   contact.addEventListener("click", function(e){
     e.preventDefault();
     contactbar.classList.toggle("visible");
   });
-}
 }
 if (hydraulics){
   hydraulics.addEventListener("click", function(e){
