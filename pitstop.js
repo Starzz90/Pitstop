@@ -75,10 +75,10 @@ sidebarLinks2.forEach(function (link) {
     sidebar2.classList.remove("visible");
   });
 });
-var contactbarLink = contact-bar.querySelectorAll("a");
+var contactbarLink = contactbar.querySelectorAll("a");
 contactbarLink.forEach(function (link){
   link.addEventListener("click", function (){
-    contact-bar.classList.remove("visible");
+    contactbar.classList.remove("visible");
   });
 }); 
 document.addEventListener("click", function (e) {
