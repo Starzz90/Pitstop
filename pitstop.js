@@ -171,5 +171,5 @@ document.addEventListener("click", function(e){
 })();
 
 function returnBtn() {
-  window.location.href = "main.html";
+  window.location.href = "index.html";
 }
