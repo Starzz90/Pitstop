@@ -1,6 +1,4 @@
-function () {
-  window.location.href = "mailto:enzodavidsontjen@gmail.com";
-}
+
 function EMAIL() {
   window.location.href = "https://wa.me/+6281360295177";
 }
