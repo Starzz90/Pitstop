@@ -1,9 +1,8 @@
-function EMAIL() {
+function () {
   window.location.href = "mailto:enzodavidsontjen@gmail.com";
 }
-function WHATSAPP() {
-  window.location.href =
-    "https://open.spotify.com/user/5x18tquo4f6y6o3fi2eihkfzl";
+function EMAIL() {
+  window.location.href = "https://wa.me/+6281360295177";
 }
 var moreBtn = document.getElementById("more-btn");
 var moreBtn1 = document.getElementById("more-btn1");
