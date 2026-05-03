@@ -70,6 +70,7 @@ body {
 
 .top-nav::-webkit-scrollbar {
   height: 4px;
+  z-index:99999999999;
 }
 
 .top-nav::-webkit-scrollbar-track {
@@ -643,8 +644,13 @@ h3 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  font: bold;
-  font-size: 22px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.list-option:hover{
+  background-color:rgba(206, 206, 206, 0.4);
+  width: 100%;
+  height: fit-content;
 }
 .type {
   display: flex;
@@ -992,7 +998,6 @@ h3 {
   place-content: center;
   z-index: 2;
   transition: background-color 0.3s ease;
-  flex-grow: 1;
 }
 
 .mini:hover {
