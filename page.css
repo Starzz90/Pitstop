@@ -128,7 +128,7 @@ body {
 }
 .top-nav a {
   color: var(--accent-color);
-  padding: 0.6rem 0.9rem;
+  padding: 0.6rem 0.6rem;
   border-radius: 100px;
   font-weight: 700;
   text-transform: uppercase;
@@ -714,7 +714,7 @@ h3 {
 }
 .auto {
   width: 150px;
-  height: 40px;
+  height: 50px;
   background-color: transparent;
   padding: 10px;
   display: flex;
