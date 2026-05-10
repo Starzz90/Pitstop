@@ -1,5 +1,5 @@
 
-function EMAIL() {
+function WHATSAPP() {
   window.location.href = "https://wa.me/+6281360295177";
 }
 var moreBtn = document.getElementById("more-btn");

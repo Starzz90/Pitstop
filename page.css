@@ -729,15 +729,15 @@ h3 {
 /* Responsive image sizing */
 @media (max-width: 1024px) {
   .auto {
-    width: 130px;
-    height: 35px;
+    width: 100px;
+    height: 37px;
     padding: 8px;
   }
 }
 
 @media (max-width: 768px) {
   .auto {
-    width: 110px;
+    width: 80px;
     height: 30px;
     padding: 6px;
   }
@@ -745,7 +745,7 @@ h3 {
 
 @media (max-width: 480px) {
   .auto {
-    width: 90px;
+    width: 70px;
     height: 25px;
     padding: 5px;
   }
@@ -1038,7 +1038,7 @@ h3 {
   height: 100%;
 }
 .option-image {
-  height: 70%;
+  height: 75%;
   width: 100%;
   object-position: center top;
 }
@@ -1049,7 +1049,7 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 90%;
+  height: 15%;
 }
 .option-label{
   background-color: var(--accent-color);
