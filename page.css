@@ -932,13 +932,15 @@ h3 {
 @media (max-width: 1200px) {
   .all-box {
     justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .all-box {
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 5px;
     padding: 10px 15px;
@@ -1070,7 +1072,6 @@ h3 {
 }
 .return-button {
   background-color: var(--accent-color);
-  border-color: trasnparent;
   border-radius: 30px;
   padding: 10px 20px;
   border: 0px solid transparent;
@@ -1078,6 +1079,7 @@ h3 {
   position: fixed;
   z-index: 9999;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
 }
 .return-button:hover {
   animation: glowSection 2.6s ease-in-out infinite;
