@@ -1,4 +1,3 @@
-
 function WHATSAPP() {
   window.location.href = "https://wa.me/+6281360295177";
 }
@@ -32,24 +31,24 @@ if (moreBtn2) {
     sidebar2.classList.toggle("visible");
   });
 }
-if (contact){
-  contact.addEventListener("click", function(e){
+if (contact) {
+  contact.addEventListener("click", function (e) {
     e.preventDefault();
     contactbar.classList.toggle("visible");
   });
 }
-if (hydraulics){
-  hydraulics.addEventListener("click", function(e){
+if (hydraulics) {
+  hydraulics.addEventListener("click", function (e) {
     window.location.href = "hydraulics.html";
   });
 }
-if (nitrogen){
-  nitrogen.addEventListener("click", function(e){
+if (nitrogen) {
+  nitrogen.addEventListener("click", function (e) {
     window.location.href = "nitrogen.html";
   });
 }
-if (shaking){
-  shaking.addEventListener("click", function(e){
+if (shaking) {
+  shaking.addEventListener("click", function (e) {
     window.location.href = "shaking.html";
   });
 }
@@ -73,11 +72,11 @@ sidebarLinks2.forEach(function (link) {
   });
 });
 var contactbarLink = contactbar.querySelectorAll("a");
-contactbarLink.forEach(function (link){
-  link.addEventListener("click", function (){
+contactbarLink.forEach(function (link) {
+  link.addEventListener("click", function () {
     contactbar.classList.remove("visible");
   });
-}); 
+});
 document.addEventListener("click", function (e) {
   if (!sidebar.contains(e.target) && e.target !== moreBtn) {
     sidebar.classList.remove("visible");
@@ -93,79 +92,52 @@ document.addEventListener("click", function (e) {
     sidebar2.classList.remove("visible");
   }
 });
-document.addEventListener("click", function(e){
-  if(!contactbar.contains(e.target) && e.target !== contact){
+document.addEventListener("click", function (e) {
+  if (!contactbar.contains(e.target) && e.target !== contact) {
     contactbar.classList.remove("visible");
   }
-
-
 });
 
-(function initCarousel() {
-  const carouselTrack = document.getElementById("carouselTrack");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  const slides = document.querySelectorAll(".carousel-slide");
+// Carousel initialization
+const carouselTrack = document.getElementById("carouselTrack");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const slides = document.querySelectorAll(".carousel-slide");
 
-  let currentIndex = 0;
-  let autoSlideInterval;
-  const AUTO_SLIDE_DELAY = 5000; // 5 seconds between slides
+let currentIndex = 0;
+const totalSlides = slides.length;
 
-  function updateCarouselPosition() {
-    const offset = -currentIndex * 100;
-    carouselTrack.style.transform = `translateX(${offset}%)`;
-  }
+function moveCarousel(n) {
+  currentIndex = (currentIndex + n + totalSlides) % totalSlides;
+  const offset = currentIndex * 25;
+  carouselTrack.style.transform = `translateX(-${offset}%)`;
+  console.log(
+    "Carousel moved to index:",
+    currentIndex,
+    "offset:",
+    -offset + "%",
+  );
+}
 
-  function goToSlide(index) {
-    currentIndex = (index + slides.length) % slides.length;
-    updateCarouselPosition();
-  }
+// Button click handlers
+if (nextBtn && carouselTrack) {
+  nextBtn.addEventListener("click", function () {
+    moveCarousel(1);
+  });
+}
 
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-    resetAutoSlide();
-  }
+if (prevBtn && carouselTrack) {
+  prevBtn.addEventListener("click", function () {
+    moveCarousel(-1);
+  });
+}
 
-  function prevSlide() {
-    goToSlide(currentIndex - 1);
-    resetAutoSlide();
-  }
-
-  function autoSlide() {
-    nextSlide();
-  }
-
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(autoSlide, AUTO_SLIDE_DELAY);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener("click", nextSlide);
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", prevSlide);
-  }
-
-
-  updateCarouselPosition();
-  startAutoSlide();
-
-  const carouselContainer = document.querySelector(".carousel-container");
-  if (carouselContainer) {
-    carouselContainer.addEventListener("mouseenter", function () {
-      clearInterval(autoSlideInterval);
-    });
-
-    carouselContainer.addEventListener("mouseleave", function () {
-      startAutoSlide();
-    });
-  }
-})();
+// Auto-rotate carousel
+if (carouselTrack) {
+  setInterval(function () {
+    moveCarousel(1);
+  }, 5000);
+}
 
 function returnBtn() {
   window.location.href = "index.html";
