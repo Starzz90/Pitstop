@@ -716,8 +716,8 @@ h3 {
   letter-spacing: 0.06rem;
 }
 .auto {
-  width: 150px;
-  height: 50px;
+  width: 85px;
+  height: 70px;
   background-color: transparent;
   padding: 10px;
   display: flex;
@@ -729,24 +729,24 @@ h3 {
 /* Responsive image sizing */
 @media (max-width: 1024px) {
   .auto {
-    width: 100px;
-    height: 37px;
+    width: 60px;
+    height: 50px;
     padding: 8px;
   }
 }
 
 @media (max-width: 768px) {
   .auto {
-    width: 80px;
-    height: 30px;
+    width: 50px;
+    height: 45px;
     padding: 6px;
   }
 }
 
 @media (max-width: 480px) {
   .auto {
-    width: 70px;
-    height: 25px;
+    width: 45px;
+    height: 30px;
     padding: 5px;
   }
 }
@@ -910,9 +910,9 @@ h3 {
 }
 .Big_Head {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   letter-spacing: 20px;
+  justify-content: center;
 }
 .all-box {
   width: 100%;
@@ -1038,7 +1038,7 @@ h3 {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  height: 100%;
+  height: auto;
 }
 .option-image {
   height: 75%;
