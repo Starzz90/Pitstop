@@ -159,8 +159,7 @@ body {
 }
 .top-nav-right a:hover,
 .top-nav-right a:focus {
-  color: #000000;
-  background: var(--accent-color);
+  color: #858585;
   transform: translateY(-1px);
   outline: none;
 }
@@ -693,6 +692,7 @@ h3 {
   width: 150px;
   position: fixed;
   height: 100vh;
+  overflow-y: auto;
   top: 0;
   left: 0;
   display: flex;
@@ -1169,6 +1169,7 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: rgba(68, 68, 68, 0.5);
+  vertical-align: middle;
 }
 
 .selection-image {
